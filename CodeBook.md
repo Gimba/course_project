@@ -1,5 +1,11 @@
-Variables in cleaned data set:
+##
 
+
+## Variables in cleaned_table_of_means
+
+Column Subject is extracted from the files subject_test/_train.txt
+
+Column Activity is extracted from file activity labels
 
 Subject
  
