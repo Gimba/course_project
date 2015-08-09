@@ -1,17 +1,17 @@
 run_analysis <- function() {
   
   ## load test data
-  test_data <- read.table("test/X_test.txt")
-  test_activities_vector <- read.table("test/y_test.txt")
-  test_subjectIDs_vector <- read.table("test/subject_test.txt")
+  test_data <- read.table("data/test/X_test.txt")
+  test_activities_vector <- read.table("data/test/y_test.txt")
+  test_subjectIDs_vector <- read.table("data/test/subject_test.txt")
   
   ## add IDs and activities of subjects columns to the right of the test data 
   test <- cbind(test_data, test_subjectIDs_vector, test_activities_vector)
   
   ## load training data
-  train_data <- read.table("train/X_train.txt")
-  train_activities_vector <- read.table("train/y_train.txt")
-  train_subjectIDs_vector <- read.table("train/subject_train.txt")
+  train_data <- read.table("data/train/X_train.txt")
+  train_activities_vector <- read.table("data/train/y_train.txt")
+  train_subjectIDs_vector <- read.table("data/train/subject_train.txt")
   
   ## add IDs and activities of subjects columns to the right of the train data 
   train <- cbind(train_data, train_subjectIDs_vector, train_activities_vector)
@@ -24,7 +24,7 @@ run_analysis <- function() {
   rm(test, test_subjectIDs_vector, test_activities_vector, test_data,train,train_subjectIDs_vector, train_activities_vector, train_data)
   
   ## load feature table
-  features  <- read.table("features.txt")
+  features  <- read.table("data/features.txt")
   
   ## some renaming
   features$V2 = gsub('-mean', 'Mean', features$V2)
@@ -41,7 +41,7 @@ run_analysis <- function() {
   rm(mean_std_column_indizes, all_data)
   
   ## load activity lables
-  activities <- read.table("activity_labels.txt")
+  activities <- read.table("data/activity_labels.txt")
   
   ## transform activities column from integer to character
   circumsized_data  <- transform(circumsized_data, V1.2=as.character(V1.2))
