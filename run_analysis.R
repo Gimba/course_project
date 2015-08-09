@@ -5,7 +5,7 @@ run_analysis <- function() {
   test_activities_vector <- read.table("data/test/y_test.txt")
   test_subjectIDs_vector <- read.table("data/test/subject_test.txt")
   
-  ## add IDs and activities of subjects columns to the right of the test data 
+  ## add subjectIDs and activities of subjects columns to the right of the test data 
   test <- cbind(test_data, test_subjectIDs_vector, test_activities_vector)
   
   ## load training data
@@ -13,10 +13,10 @@ run_analysis <- function() {
   train_activities_vector <- read.table("data/train/y_train.txt")
   train_subjectIDs_vector <- read.table("data/train/subject_train.txt")
   
-  ## add IDs and activities of subjects columns to the right of the train data 
+  ## add subjectIDs and activities of subjects columns to the right of the train data 
   train <- cbind(train_data, train_subjectIDs_vector, train_activities_vector)
   
-  ## create big table with test and train data containing IDs and activities
+  ## create big table with test and train data containing subjectIDs and activities
   ## in last two columns
   all_data <- rbind(test,train)
   
@@ -34,7 +34,7 @@ run_analysis <- function() {
   ## get column indizes of mean and std values
   mean_std_column_indizes <- features[grep(".*Mean.*|.*Std.*", features$V2),1]
   
-  ## table containing only std and mean values, IDs and activities
+  ## table containing only std and mean values, subejctIDs and activities
   circumsized_data <- all_data[,c(mean_std_column_indizes,562,563)]
   
   ## remove tables that are no longer used
@@ -52,8 +52,8 @@ run_analysis <- function() {
   ## get names of mean and std values
   mean_std_column_names <- features[grep(".*Mean.*|.*Std.*", features$V2),2]
   
-  ## add ID and activity column labels
-  mean_std_column_names <-  c(mean_std_column_names, "ID", "Activity")
+  ## add subejctID and activity column labels
+  mean_std_column_names <-  c(mean_std_column_names, "Subject", "Activity")
   
   ## set names of columns
   names(circumsized_data)  <- mean_std_column_names
@@ -64,8 +64,8 @@ run_analysis <- function() {
   ## convert columns to numeric, except activity column
   circumsized_data  <- cbind(apply(circumsized_data[1:87], 2, function(x) as.numeric(x)), circumsized_data[88])
   
-  ## get ids of participants
-  ids = unique(circumsized_data$ID)
+  ## get subjectIds of participants
+  ids = unique(circumsized_data$Subject)
   
   ## initialize empty data frame
   mean_table <-  data.frame()
@@ -73,7 +73,7 @@ run_analysis <- function() {
   for(i in ids) {
     
     ## pick one subject
-    subject <- circumsized_data[circumsized_data$ID == i,]
+    subject <- circumsized_data[circumsized_data$Subject == i,]
     
     for(j in 1:6) {
       
@@ -89,18 +89,18 @@ run_analysis <- function() {
           ## translate row vector to column vector
           mean = t(mean)
           
-          ## add ID and activity columns (for convenience I added these columns to the left)
-          ## (column names for ID and Activity get lost at this point, but will be added again later)
+          ## add subejctID and activity columns (for convenience I added these columns to the left)
+          ## (column names for subejctID and Activity get lost at this point, but will be added again later)
           mean = cbind(activity[1,87], activity[1,88], mean)
           
-          ## add the row containing ID, activity and mean values to our output table
+          ## add the row containing subejctID, activity and mean values to our output table
           mean_table = rbind(mean_table,mean)
         }
     }
   }
   
   ## name first two columns
-  colnames(mean_table)[1] <- "ID"
+  colnames(mean_table)[1] <- "Subject"
   colnames(mean_table)[2] <- "Activity"
   
   ## export cleaned table
