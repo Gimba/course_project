@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Project
 
-This repo contains the code for course project of `Getting and Cleaning Data`.
+This repo contains the code for course project of Getting and Cleaning Data.
 
 ## Script explanation
 
