@@ -18,186 +18,184 @@ The second column of the tidy data set contains the activities carried out by a 
 
 Varibles/Columns not containing the string "mean" or "std" have been excluded from the tidy data set.
 
-Selected Column names have been renamed for eased handling and reading. Mainly brackets and dashes have been deleted and words start with an capitalized letter.
+Selected Column names have been renamed for eased handling and reading. Brackets and dashes have been deleted and words start with an capitalized letter.
+
+Finally and most important, for every activity carried out by a subject the mean of the measurement variables has been calculated. 
 
 ## Variables
 
-Subject
+Subject: Range 1-30
 
-Activity
+Activity: Levels "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"
 
-tBodyAccMeanX
- 
-tBodyAccMeanY
- 
-tBodyAccMeanZ
- 
-tBodyAccStdX
- 
-tBodyAccStdY
- 
-tBodyAccStdZ
- 
-tGravityAccMeanX
- 
-tGravityAccMeanY
- 
-tGravityAccMeanZ
- 
-tGravityAccStdX
- 
-tGravityAccStdY
- 
-tGravityAccStdZ
- 
-tBodyAccJerkMeanX
- 
-tBodyAccJerkMeanY
- 
-tBodyAccJerkMeanZ
- 
-tBodyAccJerkStdX
- 
-tBodyAccJerkStdY
- 
-tBodyAccJerkStdZ
- 
-tBodyGyroMeanX
- 
-tBodyGyroMeanY
- 
-tBodyGyroMeanZ
- 
-tBodyGyroStdX
- 
-tBodyGyroStdY
- 
-tBodyGyroStdZ
- 
-tBodyGyroJerkMeanX
- 
-tBodyGyroJerkMeanY
- 
-tBodyGyroJerkMeanZ
- 
-tBodyGyroJerkStdX
- 
-tBodyGyroJerkStdY
- 
-tBodyGyroJerkStdZ
- 
-tBodyAccMagMean
- 
-tBodyAccMagStd
- 
-tGravityAccMagMean
- 
-tGravityAccMagStd
- 
-tBodyAccJerkMagMean
- 
-tBodyAccJerkMagStd
- 
-tBodyGyroMagMean
- 
-tBodyGyroMagStd
- 
-tBodyGyroJerkMagMean
- 
-tBodyGyroJerkMagStd
- 
-fBodyAccMeanX
- 
-fBodyAccMeanY
- 
-fBodyAccMeanZ
- 
-fBodyAccStdX
- 
-fBodyAccStdY
- 
-fBodyAccStdZ
- 
-fBodyAccMeanFreqX
- 
-fBodyAccMeanFreqY
- 
-fBodyAccMeanFreqZ
- 
-fBodyAccJerkMeanX
- 
-fBodyAccJerkMeanY
- 
-fBodyAccJerkMeanZ
- 
-fBodyAccJerkStdX
- 
-fBodyAccJerkStdY
- 
-fBodyAccJerkStdZ
- 
-fBodyAccJerkMeanFreqX
- 
-fBodyAccJerkMeanFreqY
- 
-fBodyAccJerkMeanFreqZ
- 
-fBodyGyroMeanX
- 
-fBodyGyroMeanY
- 
-fBodyGyroMeanZ
- 
-fBodyGyroStdX
- 
-fBodyGyroStdY
- 
-fBodyGyroStdZ
- 
-fBodyGyroMeanFreqX
- 
-fBodyGyroMeanFreqY
- 
-fBodyGyroMeanFreqZ
- 
-fBodyAccMagMean
- 
-fBodyAccMagStd
- 
-fBodyAccMagMeanFreq
- 
-fBodyBodyAccJerkMagMean
- 
-fBodyBodyAccJerkMagStd
- 
-fBodyBodyAccJerkMagMeanFreq
- 
-fBodyBodyGyroMagMean
- 
-fBodyBodyGyroMagStd
- 
-fBodyBodyGyroMagMeanFreq
- 
-fBodyBodyGyroJerkMagMean
- 
-fBodyBodyGyroJerkMagStd
- 
-fBodyBodyGyroJerkMagMeanFreq
- 
-angletBodyAccMean.gravity
- 
-angletBodyAccJerkMean.gravityMean
- 
-angletBodyGyroMean.gravityMean
- 
-angletBodyGyroJerkMean.gravityMean
- 
-angleX.gravityMean
- 
-angleY.gravityMean
- 
+numerictBodyAccMeanX: numeric
+
+tBodyAccMeanY: numeric
+
+tBodyAccMeanZ: numeric
+
+tBodyAccStdX: numeric
+
+tBodyAccStdY: numeric
+
+tBodyAccStdZ: numeric
+
+tGravityAccMeanX: numeric
+
+tGravityAccMeanY: numeric
+
+tGravityAccMeanZ: numeric
+
+tGravityAccStdX: numeric
+
+tGravityAccStdY: numeric
+
+tGravityAccStdZ: numeric
+
+tBodyAccJerkMeanX: numeric
+
+tBodyAccJerkMeanY: numeric
+
+tBodyAccJerkMeanZ: numeric
+
+tBodyAccJerkStdX: numeric
+
+tBodyAccJerkStdY: numeric
+
+tBodyAccJerkStdZ: numeric
+
+tBodyGyroMeanX: numeric
+
+tBodyGyroMeanY: numeric
+
+tBodyGyroMeanZ: numeric
+
+tBodyGyroStdX: numeric
+
+tBodyGyroStdY: numeric
+
+tBodyGyroStdZ: numeric
+
+tBodyGyroJerkMeanX: numeric
+
+tBodyGyroJerkMeanY: numeric
+
+tBodyGyroJerkMeanZ: numeric
+
+tBodyGyroJerkStdX: numeric
+
+tBodyGyroJerkStdY: numeric
+
+tBodyGyroJerkStdZ: numeric
+
+tBodyAccMagMean: numeric
+
+tBodyAccMagStd: numeric
+
+tGravityAccMagMean: numeric
+
+tGravityAccMagStd: numeric
+
+tBodyAccJerkMagMean: numeric
+
+tBodyAccJerkMagStd: numeric
+
+tBodyGyroMagMean: numeric
+
+tBodyGyroMagStd: numeric
+
+tBodyGyroJerkMagMean: numeric
+
+tBodyGyroJerkMagStd: numeric
+
+fBodyAccMeanX: numeric
+
+fBodyAccMeanY: numeric
+
+fBodyAccMeanZ: numeric
+
+fBodyAccStdX: numeric
+
+fBodyAccStdY: numeric
+
+fBodyAccStdZ: numeric
+
+fBodyAccMeanFreqX: numeric
+
+fBodyAccMeanFreqY: numeric
+
+fBodyAccMeanFreqZ: numeric
+
+fBodyAccJerkMeanX: numeric
+
+fBodyAccJerkMeanY: numeric
+
+fBodyAccJerkMeanZ: numeric
+
+fBodyAccJerkStdX: numeric
+
+fBodyAccJerkStdY: numeric
+
+fBodyAccJerkStdZ: numeric
+
+fBodyAccJerkMeanFreqX: numeric
+
+fBodyAccJerkMeanFreqY: numeric
+
+fBodyAccJerkMeanFreqZ: numeric
+
+fBodyGyroMeanX: numeric
+
+fBodyGyroMeanY: numeric
+
+fBodyGyroMeanZ: numeric
+
+fBodyGyroStdX: numeric
+
+fBodyGyroStdY: numeric
+
+fBodyGyroStdZ: numeric
+
+fBodyGyroMeanFreqX: numeric
+
+fBodyGyroMeanFreqY: numeric
+
+fBodyGyroMeanFreqZ: numeric
+
+fBodyAccMagMean: numeric
+
+fBodyAccMagStd: numeric
+
+fBodyAccMagMeanFreq: numeric
+
+fBodyBodyAccJerkMagMean: numeric
+
+fBodyBodyAccJerkMagStd: numeric
+
+fBodyBodyAccJerkMagMeanFreq: numeric
+
+fBodyBodyGyroMagMean: numeric
+
+fBodyBodyGyroMagStd: numeric
+
+fBodyBodyGyroMagMeanFreq: numeric
+
+fBodyBodyGyroJerkMagMean: numeric
+
+fBodyBodyGyroJerkMagStd: numeric
+
+fBodyBodyGyroJerkMagMeanFreq: numeric
+
+angletBodyAccMean.gravity: numeric
+
+angletBodyAccJerkMean.gravityMean: numeric
+
+angletBodyGyroMean.gravityMean: numeric
+
+angletBodyGyroJerkMean.gravityMean: numeric
+
+angleX.gravityMean: numeric
+
+angleY.gravityMean: numeric
+
 angleZ.gravityMean
- 
-Column Subject is extracted from the files subject_test/_train.txt
-
-Column Activity is extracted from file activity labels
