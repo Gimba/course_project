@@ -198,4 +198,4 @@ angleX.gravityMean: numeric
 
 angleY.gravityMean: numeric
 
-angleZ.gravityMean
+angleZ.gravityMean: numeric
