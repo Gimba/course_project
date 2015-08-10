@@ -18,7 +18,7 @@ The second column of the tidy data set contains the activities carried out by a 
 
 Varibles/Columns not containing the string "mean" or "std" have been excluded from the tidy data set.
 
-Selected Column names have been renamed for eased handling and reading. Brackets and dashes have been deleted and words start with an capitalized letter.
+Selected Column names have been renamed for eased handling and reading. Brackets and dashes have been deleted and words start with a capitalized letter.
 
 Finally and most important, for every activity carried out by a subject the mean of the measurement variables has been calculated. 
 
